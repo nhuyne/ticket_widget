@@ -7,23 +7,40 @@
     html, body {
       margin: 0;
       padding: 0;
-      background-color: black;
+      background-color: #000;
       overflow: hidden;
       height: 100%;
     }
-
     iframe {
       width: 100%;
       height: 100%;
       border: none;
     }
+    .fallback {
+      color: white;
+      font-size: 24px;
+      text-align: center;
+      padding-top: 30%;
+      font-family: Arial, sans-serif;
+      display: none;
+    }
   </style>
+  <script>
+    function showFallback() {
+      document.querySelector("iframe").style.display = "none";
+      document.querySelector(".fallback").style.display = "block";
+    }
+  </script>
 </head>
 <body>
   <iframe 
-    src="https://www.tradingview.com/embed-widget/ticker-tape/?locale=en&symbols=%5B%7B%22proName%22%3A%22NASDAQ%3AAAPL%22%2C%22title%22%3A%22%22%7D%2C%7B%22proName%22%3A%22NASDAQ%3ATSLA%22%2C%22title%22%3A%22%22%7D%2C%7B%22proName%22%3A%22NASDAQ%3ANVDA%22%2C%22title%22%3A%22%22%7D%2C%7B%22proName%22%3A%22NASDAQ%3AAMZN%22%2C%22title%22%3A%22%22%7D%2C%7B%22proName%22%3A%22BINANCE%3ABTCUSDT%22%2C%22title%22%3A%22%22%7D%2C%7B%22proName%22%3A%22BINANCE%3AETHUSDT%22%2C%22title%22%3A%22%22%7D%5D&colorTheme=dark&isTransparent=false&displayMode=regular&showSymbolLogo=true"
+    src="https://s.tradingview.com/embed-widget/ticker-tape/?locale=en&symbols=%5BNASDAQ%3AAAPL%2CNASDAQ%3ATSLA%2CNASDAQ%3ANVDA%2CNASDAQ%3AAMZN%2CBINANCE%3ABTCUSDT%2CBINANCE%3AETHUSDT%5D&colorTheme=dark&isTransparent=false&displayMode=regular&showSymbolLogo=true"
+    onerror="showFallback()"
     allowtransparency="true"
     scrolling="no">
   </iframe>
+  <div class="fallback">
+    Không thể tải TradingView<br>Hãy kiểm tra kết nối hoặc phiên bản vMix
+  </div>
 </body>
 </html>
