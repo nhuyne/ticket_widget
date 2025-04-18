@@ -1,52 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>TradingView Ticker for vMix</title>
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      background-color: dark;
-      overflow: hidden;
-      height: 100%;
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+  {
+  "symbols": [
+    {
+      "description": "",
+      "proName": "NASDAQ:AAPL"
+    },
+    {
+      "description": "",
+      "proName": "NASDAQ:TSLA"
+    },
+    {
+      "description": "",
+      "proName": "NASDAQ:NVDA"
+    },
+    {
+      "description": "",
+      "proName": "NASDAQ:AMZN"
+    },
+    {
+      "description": "",
+      "proName": "BINANCE:BTCUSDT"
+    },
+    {
+      "description": "",
+      "proName": "BINANCE:ETHUSDT"
     }
-    .tradingview-widget-container {
-      width: 100%;
-      height: 100%;
-    }
-  </style>
-</head>
-<body>
-  <!-- TradingView Widget BEGIN -->
-  <div class="tradingview-widget-container">
-    <div class="tradingview-widget-container__widget"></div>
-    <div class="tradingview-widget-copyright">
-      <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">
-        <span class="blue-text">Track all markets on TradingView</span>
-      </a>
-    </div>
-  </div>
-
-  <!-- Đặt script sau phần HTML để đảm bảo vMix tải đúng -->
-  <script type="text/javascript">
-    new TradingView.widget({
-      "symbols": [
-        { "proName": "NASDAQ:AAPL", "title": "Apple" },
-        { "proName": "NASDAQ:TSLA", "title": "Tesla" },
-        { "proName": "NASDAQ:NVDA", "title": "NVIDIA" },
-        { "proName": "NASDAQ:AMZN", "title": "Amazon" },
-        { "proName": "BINANCE:BTCUSDT", "title": "BTC/USDT" },
-        { "proName": "BINANCE:ETHUSDT", "title": "ETH/USDT" }
-      ],
-      "showSymbolLogo": true,
-      "isTransparent": false,
-      "displayMode": "regular",
-      "colorTheme": "dark",
-      "locale": "en"
-    });
+  ],
+  "showSymbolLogo": true,
+  "isTransparent": false,
+  "displayMode": "regular",
+  "colorTheme": "dark",
+  "locale": "en"
+}
   </script>
-  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js"></script>
-  <!-- TradingView Widget END -->
-</body>
-</html>
+</div>
+<!-- TradingView Widget END -->
