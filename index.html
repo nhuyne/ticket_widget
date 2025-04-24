@@ -1,41 +1,57 @@
-<!-- TradingView Widget BEGIN -->
-<div class="tradingview-widget-container">
-  <div class="tradingview-widget-container__widget"></div>
-  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
-  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
-  {
-  "symbols": [
-    {
-      "description": "",
-      "proName": "NASDAQ:AAPL"
-    },
-    {
-      "description": "",
-      "proName": "NASDAQ:TSLA"
-    },
-    {
-      "description": "",
-      "proName": "NASDAQ:NVDA"
-    },
-    {
-      "description": "",
-      "proName": "NASDAQ:AMZN"
-    },
-    {
-      "description": "",
-      "proName": "BINANCE:BTCUSDT"
-    },
-    {
-      "description": "",
-      "proName": "BINANCE:ETHUSDT"
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ticker TradingView</title>
+  <style>
+    /* Ngăn hover làm ticker dừng */
+    .tradingview-widget-container__widget * {
+      pointer-events: none !important;
     }
-  ],
-  "showSymbolLogo": true,
-  "isTransparent": false,
-  "displayMode": "regular",
-  "colorTheme": "dark",
-  "locale": "en"
-}
-  </script>
-</div>
-<!-- TradingView Widget END -->
+
+    body {
+      margin: 0;
+      background-color: #111;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .tradingview-widget-container {
+      max-width: 100%;
+    }
+
+    .tradingview-widget-copyright {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TradingView Widget BEGIN -->
+  <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+    {
+      "symbols": [
+        { "proName": "NASDAQ:AAPL", "description": "" },
+        { "proName": "NASDAQ:TSLA", "description": "" },
+        { "proName": "NASDAQ:NVDA", "description": "" },
+        { "proName": "NASDAQ:AMZN", "description": "" },
+        { "proName": "BINANCE:BTCUSDT", "description": "" },
+        { "proName": "BINANCE:ETHUSDT", "description": "" }
+      ],
+      "showSymbolLogo": true,
+      "isTransparent": false,
+      "displayMode": "regular",
+      "colorTheme": "dark",
+      "locale": "en"
+    }
+    </script>
+  </div>
+  <!-- TradingView Widget END -->
+
+</body>
+</html>
